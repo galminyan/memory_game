@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+        <button class="start">START</button>
+        <section class="score-panel">
+               <div class="box">
+                <ul class="stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <span class="title">Rating</span>
+        	</div>
+        	<div class="box">
+                <i class="fas fa-shoe-prints"></i>
+                <span class="title moves">0</span> Moves
+            </div>
+            <div class="box">
+                <i class="fa fa-clock"></i>
+                <span class="title">Time:</span>
+                <label class="minutes">00</label>:<label class="seconds">00</label>
+            </div>
+            <div class="box restart">
+        		<i class="fas fa-redo"></i>
+        		<span class="title">Restart</span>
+        	</div>
+        </section>
+
+        <ul class="deck"></ul>
+    </div>
+    <!-- Trigger/Open The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <img class="winPic" src="img/congratulations.jpg" alt="congratulations">
+        <div class="announcement">
+        </div>
+        <span class="close">&times;</span>
+        <button class="startAgain">Play again</button>
+      </div>
+
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

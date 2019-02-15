@@ -1,0 +1,224 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+    
+}
+
+.deck .card.oops {
+    transform: rotateY(0);
+    background-color: coral;
+    cursor: default;
+    
+}
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    animation: matching 2 0.3s;
+}
+
+.deck .card.oops {
+    cursor: default;
+    background: red;
+    font-size: 33px;
+    animation: oopsing 2 0.3s;
+}
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: justify;
+    width: 660px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    cursor: pointer
+}
+
+.box {
+    width: 25%;
+    text-align: center;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    border-radius: 8px;
+    margin: auto;
+}
+
+.title {
+    margin-left: 5px;
+}
+
+@keyframes matching {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes oopsing {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.start, .startAgain {
+    margin-bottom: 10px;
+    width: 100px;
+    height:55px;
+    border-radius: 80px;
+    background-color:#cc0000;
+    font-family: inherit;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);    
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    text-align: center;
+    color: red;
+    background: #ffffff url('../img/geometry2.png'); 
+    font-size: 22px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    font-size: 80px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.winPic {
+    width: 60%;  
+}
+
+.winwin {
+    margin-bottom: 8px;
+}
